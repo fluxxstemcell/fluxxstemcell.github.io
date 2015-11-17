@@ -1,0 +1,138 @@
+body {
+    padding:2% 0% 0% 0%;
+    background-color: #444444;
+}
+#tabs {
+    width:92%;
+    background-color: #2A2A2A;
+    padding:0px 20px;
+    margin: none;
+    margin-right: auto;
+    margin-left:auto;
+
+}
+
+.tab {
+    height: 40px;
+    background-color: #2A2A2A;
+    color:white;
+    border:none;
+    padding:0px 20px;
+    font-family: Helvetica;
+}
+
+.tab:hover {
+    color:white;
+    font-size: 18px;
+}
+.tab#home:hover{      
+    background-color: #FF4242;
+}
+
+.tab#cardList:hover{      
+    background-color: #FFBB33;
+}
+
+.tab#stemCells:hover{      
+    background-color: #99CC00;
+}
+
+.tab#game:hover{      
+    background-color: #34B6E5;
+}
+
+.tab#teachers:hover{      
+    background-color: #AA66CC;
+}
+
+.selected {
+    font-size: 18px;
+    color:#AEC240;
+}
+
+.row-fluid #intro{
+      background-color: #444444;
+      width:100%;
+}
+#main {
+    width:90%;
+    margin-top:2em;
+    margin-bottom: 2em;
+    background-image:url(/images/blackboard.jpg);
+
+}
+#intro {
+    font-weight: bolder;
+    width:90%;
+    margin-right: auto;
+    margin-left:auto;
+    font-family:sans-serif;
+    padding:3% 1%;
+
+}
+
+#intro.row-fluid div.span4 #name {
+    color:white;
+    float:left;
+    font-size: 50px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+#intro.row-fluid div.span4 #des {
+    color: #AEC240;
+    margin: none ;
+    font-family:Century Gothic, sans-serif
+}
+
+#theme_comic {
+    float:left;
+    background-color: #444444;
+}
+
+.intro_video >iframe{
+   margin-bottom: 2em;
+}
+
+
+div#linkToVideo #more_info {
+    font-family: Century Gothic, sans-serif;
+    font-size: 20px;
+    color:white;
+    text-align: left;
+}
+
+#myCanvas {
+    width :300px; 
+    height :150px;
+    float:left;
+}
+
+body #footer {
+    background-color: #4B3527;
+    margin-bottom: none;
+    height: 60px;
+    font-size: 13px;
+    font-family:Tahoma, Geneva, sans-serif;
+    color:white;
+    text-align: right;
+}
+
+#footer #F {
+    color: #FF4242;
+}
+
+#footer #l {
+    color:#FFBB33;
+}
+
+#footer #u {
+    color:#99CC00;
+}
+
+#footer #x1 {
+  color:#34B6E5;
+} 
+
+#footer #x2 {
+   color:#AA66CC;
+}
