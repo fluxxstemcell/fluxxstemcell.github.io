@@ -1,25 +1,161 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>StemCellFluxx</title>
- <link rel="stylesheet" href="../css/style.css">
-  <link href="../bootstrap/bootstrap.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>StemCellFluxx</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../bootstrap/bootstrap.css" rel="stylesheet">
     <link href="../bootstrap/bootstrap-responsive.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/examples.css" media="screen">
+    <script type="text/javascript" src="../js/guggenheim.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
-<body>
 
-
-  <div id="tabs"> 
-    <a href="../index.html" ><button class="tab" id="home">HOME</button></a>
-    <a href="cardList.html"><button class="tab selected" id="cardList">CARD LIST</button></a>
-    <a href="aboutGame.html"><button class="tab" id="stemCells">STEM CELLS</button></a>
-    <a href="stemCells.html"><button class="tab" id="game">ALL ABOUT GAME</button></a>
-    <a href="teachers.html"><button class="tab" id="teachers">FOR TEACHERS</button></a>
-  </div>
-
- 
- 
+<body cz-shortcut-listen="true">
+    <div id="tabs">
+        <a href="../index.html">
+            <button class="tab" id="home">HOME</button>
+        </a>
+        <a href="cardList.html">
+            <button class="tab selected" id="cardList">CARD LIST</button>
+        </a>
+        <a href="stemCells.html">
+            <button class="tab" id="stemCells">STEM CELLS</button>
+        </a>
+        <a href="aboutGame.html">
+            <button class="tab" id="game">ALL ABOUT GAME</button>
+        </a>
+        <a href="teachers.html">
+            <button class="tab" id="teachers">FOR TEACHERS</button>
+        </a>
+    </div>
+    <div id="container">
+        <ul>
+            <li style="list-style:none;">
+                <a onclick="resetGallery()" class="button">Reset Gallery</a>
+                <a class="button" onclick="gallery.prev()">Prev</a>
+                <a class="button" onclick="gallery.next()">Next</a>
+            </li>
+        </ul>
+        <form id="filter-form">
+            <div class="filter-set">
+                <ul>
+                    <li style="list-style:none;">
+                        <label>
+                            <input type="radio" value="" checked="checked" name="group" onclick="filterGallery()"> All
+                        </label>
+                        <label>
+                            <input type="radio" value="goal" name="group" onclick="filterGallery()"> Goal
+                        </label>
+                        <label>
+                            <input type="radio" value="supplier" name="group" onclick="filterGallery()"> Supplier
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="filter-set double">
+                <ul>
+                    <li style="list-style:none;">
+                        <label>
+                            <input type="checkbox" value="" checked="checked" name="all-teams" onclick="toggleCheckboxes(this); filterGallery()"> All
+                        </label>
+                        <label>
+                            <input type="checkbox" value="avengers" name="avengers" onclick="toggleCheckboxes(this); filterGallery()" class="team"> BMP-2
+                        </label>
+                        <label>
+                            <input type="checkbox" value="fantasticfour" name="fantasticfour" onclick="toggleCheckboxes(this); filterGallery()" class="team"> VEG-f
+                        </label>
+                        <label>
+                            <input type="checkbox" value="nogroup" name="nogroup" onclick="toggleCheckboxes(this); filterGallery()" class="team"> Other / None
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </form>
+        <div id="middle">
+            <div id="basic-gallery" class="gallery" style="overflow: hidden; position: relative;">
+                <div class="guggenheim-slider" style="left: 10px; position: relative; transition-property: left; transition-duration: 0.5s; transition-timing-function: ease;">
+                    <div class="guggenheim-item vegf bfgf angiogenesis goal" style="position: absolute; width: 155px; height: 225px; left: 0px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="goal_angiogenesis" class="sprite"></span></div>
+                    <div class="guggenheim-item chondrocyte proteoglycans bmp2 goal" style="position: absolute; width: 155px; height: 225px; left: 195px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="goal_chondrocyte" class="sprite"></span></div>
+                    <div class="guggenheim-item bmp2 cartilage proteoglycans collagen goal" style="position: absolute; width: 155px; height: 225px; left: 390px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="goal_cartilage" class="sprite"></span></div>
+                    <div class="guggenheim-item marvel male powers xmen 197505" style="position: absolute; width: 155px; height: 225px; left: 585px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite"></span></div>
+                    <div class="guggenheim-item BrainTherapy hydrogel collagen bdnf goal" style="position: absolute; width: 155px; height: 225px; left: 0px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="goal_BrainTherapy" class="sprite"></span></div>
+                    <div class="guggenheim-item bone bmp2 collagen goal" style="position: absolute; width: 155px; height: 225px; left: 195px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="goal_bone" class="sprite"></span></div>
+                    <div class="guggenheim-item osteoblast tgfb bmp2 goal" style="position: absolute; width: 155px; height: 225px; left: 390px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="goal_osteoblast" class="sprite"></span></div>
+                    <div class="guggenheim-item dc male powers justiceleague 194007" style="position: absolute; width: 155px; height: 225px; left: 585px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite"></span></div>
+                    <div class="guggenheim-item angiogenesis vegf supplier" style="position: absolute; width: 155px; height: 225px; left: 800px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_vegf" class="sprite"></span></div>
+                    <div class="guggenheim-item bfgf angiogenesis supplier" style="position: absolute; width: 155px; height: 225px; left: 995px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_bfgf" class="sprite"></span></div>
+                    <div class="guggenheim-item marvel male powers avengers 196205" style="position: absolute; width: 155px; height: 225px; left: 1190px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite"></span></div>
+                    <div class="guggenheim-item marvel male powers fantasticfour 196111" style="position: absolute; width: 155px; height: 225px; left: 1385px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite"></span></div>
+                    <div class="guggenheim-item myod supplier" style="position: absolute; width: 155px; height: 225px; left: 0px; top: 0px; opacity: 1; transition-property: top, left, opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_myod" class="sprite"></span></div>
+                    <div class="guggenheim-item bone collagen supplier" style="position: absolute; width: 155px; height: 225px; left: 800px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_collagen" class="sprite"></span></div>
+                    <div class="guggenheim-item marvel female powers xmen 196309" style="position: absolute; width: 155px; height: 225px; left: 195px; top: 0px; opacity: 1; transition-property: top, left, opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite"></span></div>
+                    <div class="guggenheim-item dc male powers justiceleague 195511" style="position: absolute; width: 155px; height: 225px; left: 995px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite"></span></div>
+                    <div class="guggenheim-item hydrogel BrainTherapy neuron supplier" style="position: absolute; width: 155px; height: 225px; left: 1190px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_hydrogel" class="sprite"></span></div>
+                    <div class="guggenheim-item bdnf BrainTherapy neuron supplier" style="position: absolute; width: 155px; height: 225px; left: 1385px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_bdnf" class="sprite"></span></div>
+                    <div class="guggenheim-item dc male nopowers nogroup 199509" style="position: absolute; width: 155px; height: 225px; left: 1600px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite"></span></div>
+                    <div class="guggenheim-item marvel male powers xmen 196309" style="position: absolute; width: 155px; height: 225px; left: 1795px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite"></span></div>
+                    <div class="guggenheim-item plga supplier" style="position: absolute; width: 155px; height: 225px; left: 390px; top: 0px; opacity: 1; transition-property: top, left, opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_plga" class="sprite"></span></div>
+                    <div class="guggenheim-item fibroblast tgfb bfgf goal" style="position: absolute; width: 155px; height: 225px; left: 585px; top: 0px; opacity: 1; transition-property: top, left, opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="goal_Fibroblast" class="sprite"></span></div>
+                    <div class="guggenheim-item marvel male powers nogroup 196208" style="position: absolute; width: 155px; height: 225px; left: 1990px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite spiderman"></span></div>
+                    <div class="guggenheim-item marvel female powers xmen 197505" style="position: absolute; width: 155px; height: 225px; left: 0px; top: 265px; opacity: 1; transition-property: top, left, opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite storm"></span></div>
+                    <div class="guggenheim-item s_proteoglycans supplier" style="position: absolute; width: 155px; height: 225px; left: 2185px; top: 0px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_proteoglycans" class="sprite"></span></div>
+                    <div class="guggenheim-item bone osteoblast bmp2 supplier" style="position: absolute; width: 155px; height: 225px; left: 1600px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_bmp2" class="sprite"></span></div>
+                    <div class="guggenheim-item marvel male powers avengers 196208" style="position: absolute; width: 155px; height: 225px; left: 1795px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite thor"></span></div>
+                    <div class="guggenheim-item marvel female powers avengers 196306" style="position: absolute; width: 155px; height: 225px; left: 195px; top: 265px; opacity: 1; transition-property: top, left, opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span class="sprite wasp"></span></div>
+                    <div class="guggenheim-item neuron bdnf hydrogel goal" style="position: absolute; width: 155px; height: 225px; left: 1990px; top: 265px; opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="goal_neuron"class="sprite"></span></div>
+                    <div class="guggenheim-item tgfb fibroblast osteoblast supplier" style="position: absolute; width: 155px; height: 225px; left: 390px; top: 265px; opacity: 1; transition-property: top, left, opacity; transition-duration: 0.5s; transition-timing-function: ease;"><span id="s_tgfb" class="sprite"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="row-fluid">
+        <div id="aboutUs" class="span11">
+            <p>©StemCellFluxx group for <a href="http://www.bme.cmu.edu/ugprog/catalog.html" style="text-decoration: none">Stem Cell Engineering Course</a></p>
+            <p>Stem Cell
+                <span id="F">F</span><span id="l">l</span><span id="u">u</span><span id="x1">x</span><span id="x2">x</span> ©2015
+            </p>
+        </div>
+        <div class="span1"></div>
+    </div>
 </body>
+<script type="text/javascript">
+function resetGallery() {
+    $('input[name="group"]').val([''])
+    $('input[type="checkbox"]').val([''])
+    
+    gallery.reset()
+}
+
+
+function filterGallery() {
+    var filters = [],
+        teams = []
+
+    filters.push($('input[name="group"]:checked').val())
+  
+    $('input[type="checkbox"]:checked').each(function(i, item) {
+        teams.push(item.value)
+    })
+
+    filters.push(teams.join('|'))
+
+    gallery.filter(filters)
+}
+
+function toggleCheckboxes(input) {
+    if ($('input[type="checkbox"].team:checked').length && input != $('input[name="all-teams"]')[0])
+        $('input[name="all-teams"]').attr('checked', false)
+    else
+        $('input[type="checkbox"]').val([''])
+}
+
+window.onload = function() {
+    gallery = guggenheim('#basic-gallery')
+    filterGallery()
+};
+</script>
+
 </html>

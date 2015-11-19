@@ -1,11 +1,11 @@
 body {
-    padding:2% 0% 0% 0%;
+    padding:0% 0% 0% 0%;
     background-color: #444444;
 }
 #tabs {
     width:92%;
     background-color: #2A2A2A;
-    padding:0px 20px;
+    padding:none;
     margin: none;
     margin-right: auto;
     margin-left:auto;
@@ -58,8 +58,7 @@ body {
     width:90%;
     margin-top:2em;
     margin-bottom: 2em;
-    background-image:url(/images/blackboard.jpg);
-
+    background-image:url(../images/blackboard.jpg);
 }
 #intro {
     font-weight: bolder;

@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Museo700';
+    src: url('../fonts/museo700-regular-webfont.eot');
+    src: url('../fonts/museo700-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo700-regular-webfont.woff') format('woff'),
+         url('../fonts/museo700-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo700-regular-webfont.svg#Museo700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Museo500';
+    src: url('../fonts/museo500-regular-webfont.eot');
+    src: url('../fonts/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo500-regular-webfont.woff') format('woff'),
+         url('../fonts/museo500-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo500-regular-webfont.svg#Museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Museo300';
+    src: url('../fonts/museo300-regular-webfont.eot');
+    src: url('../fonts/museo300-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo300-regular-webfont.woff') format('woff'),
+         url('../fonts/museo300-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo300-regular-webfont.svg#Museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+		background:#666;
+		margin:0;
+		padding:0;
+		font:10pt Helvetica,Arial, sans-serif;
+        color:white;
+	}
+	
+	#container{
+		width:90%;
+        margin-top:2em;
+        margin-bottom: 2em;
+        margin-left: auto;
+        margin-right: auto;
+       background-image:url(/images/blackboard.jpg);
+	}
+	
+	#header{
+		height:125px;
+		background:#06f;
+		position:relative;
+	}
+	
+	#middle{
+		padding:20px 50px;
+	}
+	
+	h1{
+		color:#fff;
+		font:20pt 'Museo700',Helvetica,sans-serif;
+		top:40px;
+		left:50px;
+		margin:0;
+		position:absolute;
+	}
+	
+	h2{
+		font:14pt 'Museo500',Helvetica,sans-serif;
+		clear:both;
+	}
+	
+	h3{
+		font:12pt 'Museo300',Helvetica,sans-serif;
+		margin-top:0;
+	}
+
+	form:after{
+		content: ".";
+    	display: block;
+    	height: 0;
+    	clear: both;
+    	visibility: hidden;
+	}
+	
+	.gallery{
+		color:white;
+		width:780px;
+		height:570px;
+		padding:10px;
+		text-align:center;
+		position:relative;
+		overflow:hidden;
+	}
+
+	.buttons{
+		position:absolute;
+		right:10px;
+		bottom:10px;
+	}
+
+	.buttons a, a.button{
+		cursor:pointer;
+		display:inline-block;
+		padding:5px;
+		text-align:center;
+		margin-left:3px;
+		color:#FFF;
+		font-weight:bold;
+        border:2px white solid;
+	}
+
+	a.button.current{
+		background:#06f;
+	}
+
+	.guggenheim-item{
+		width:155px;
+		height:225px;
+        padding:10px;
+		margin:10px 20px 10px 0;
+		color:#fff;
+		
+		font:12pt 'Museo700',Helvetica,sans-serif;
+	}
+
+
+	.filter-set label{
+		width:150px;
+		display:inline;
+	}
+		
+    .li {
+        display: inline;
+    }
+
+.sprite {width:155px; height:226px; display:inline-block; overflow:hidden; background-repeat: no-repeat;}
+
+#goal_angiogenesis {background-image:url("../images/cards/goal/goal_angiogenesis.png");background-size: contain;}
+#goal_chondrocyte {background-image:url("../images/cards/goal/goal_chondrocyte.png");background-size: contain;}
+#goal_cartilage {background-image:url("../images/cards/goal/goal_cartilage.png");background-size: contain;}
+#goal_neuron {background-image:url("../images/cards/goal/goal_neuron.png");background-size: contain;}
+#goal_BrainTherapy {background-image:url("../images/cards/goal/goal_BrainTherapy.png");background-size: contain;}
+#goal_bone {background-image:url("../images/cards/goal/goal_bone.png");background-size: contain;}
+#goal_osteoblast {background-image:url("../images/cards/goal/goal_osteoblast.png");background-size: contain;}
+#goal_Fibroblast {background-image:url("../images/cards/goal/goal_Fibroblast.png");background-size: contain;}
+#s_vegf {background-image:url("../images/cards/supplies/s_vegf.png");background-size: contain;}
+#s_bfgf {background-image:url("../images/cards/supplies/s_bfgf.png");background-size: contain;}
+#s_bmp2 {background-image:url("../images/cards/supplies/s_bmp2.png");background-size: contain;}
+#s_proteoglycans {background-image:url("../images/cards/supplies/s_proteoglycans.png");background-size: contain;}
+#s_myod {background-image:url("../images/cards/supplies/s_myod.png");background-size: contain;}
+#s_collagen {background-image:url("../images/cards/supplies/s_collagen.png");background-size: contain;}
+#s_tgfb {background-image:url("../images/cards/supplies/s_tgfb.png");background-size: contain;}
+#s_bdnf {background-image:url("../images/cards/supplies/s_bdnf.png");background-size: contain;}
+#s_hydrogel {background-image:url("../images/cards/supplies/s_hydrogel.png");background-size: contain;}
+#s_plga {background-image:url("../images/cards/supplies/s_plga.png");background-size: contain;}
+.nightwing {background-position: -2px -686px}
+.professor-x {background-position: -159px -686px}
+.rogue {background-position: -316px -686px}
+.scarlet-witch {background-position: -473px -686px}
+.spiderman {background-position: -630px -686px}
+.storm {background-position: -787px -686px}
+.superman {background-position: -2px -914px}
+.thing {background-position: -159px -914px}
+.thor {background-position: -316px -914px}
+.wasp {background-position: -473px -914px}
+.wolverine {background-position: -630px -914px}
+.wonder-woman {background-position: -787px -914px}
+
