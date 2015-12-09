@@ -131,3 +131,9 @@ body #footer {
 #footer #x2 {
    color:#AA66CC;
 }
+
+.pdfLink {
+    font-size: 20px;
+    color:white;
+    background-color: purple;
+}
