@@ -1,89 +1,90 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>StemCellFluxx</title>
- <link rel="stylesheet" href="css/style.css">
-  <link href="./bootstrap/bootstrap.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>StemCellFluxx</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="./bootstrap/bootstrap.css" rel="stylesheet">
     <link href="./bootstrap/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/js/alphabet.js"></script>
     <script type="text/javascript" src="/js/jquery.hovercard.min.js"></script>
     <script type="text/javascript" src="/js/hoverCardControl.js"></script>
-    
 </head>
+
 <body>
-
-
-  <div id="tabs"> 
-    <a href="../index.html" ><button class="tab selected" id="home">HOME</button></a>
-    <a href="links/cardList.html"><button class="tab" id="cardList">CARD LIST</button></a>
-    <a href="links/stemCells.html"><button class="tab" id="stemCells">STEM CELLS</button></a>
-    <a href="links/aboutGame.html"><button class="tab" id="game">ALL ABOUT GAME</button></a>
-    <a href="links/teachers.html"><button class="tab" id="teachers">FOR TEACHERS</button></a>
-  </div>
-
-  
- <div class="container" id="main">
-  <div class="row-fluid" id="intro">
-        <div class="span4" >
-        
-        <div class="row-fluid">
-          <h1 id="name">Stem Cell</h1>
-          <div class="row-fluid">
-            <canvas id="myCanvas"></canvas>
-            <script type="text/javascript" src="/js/bubbles.js"></script>
-            <script type="text/javascript" src="/js/main.js"></script>
-          </div>
-            <div class="row-fluid">
-              <h2 id="des">A stem cell course with a card game!</h2> 
+    <div id="tabs">
+        <a href="../index.html">
+            <button class="tab selected" id="home">HOME</button>
+        </a>
+        <a href="links/cardList.html">
+            <button class="tab" id="cardList">THE GAME</button>
+        </a>
+        <a href="links/stemCells.html">
+            <button class="tab" id="stemCells">STEM CELLS</button>
+        </a>
+        <a href="links/teachers.html">
+            <button class="tab" id="teachers">FOR TEACHERS</button>
+        </a>
+    </div>
+    <div class="container" id="main">
+        <div class="row-fluid" id="intro">
+            <div class="span4">
+                <div class="row-fluid">
+                    <h1 id="name">Stem Cell</h1>
+                    <div class="row-fluid">
+                        <canvas id="myCanvas"></canvas>
+                        <script type="text/javascript" src="/js/bubbles.js"></script>
+                        <script type="text/javascript" src="/js/main.js"></script>
+                    </div>
+                    <div class="row-fluid">
+                        <h2 id="des">A stem cell course with a card game!</h2>
+                    </div>
+                </div>
             </div>
-          
+            <div class="span4 theme_comic" id="whenI-was-a-little-stem-cell">
+                <img src="images/when-I-was-a-little-stem-ce.gif">
+            </div>
+            <div class="span4 theme_comic" id="stemCell">
+                <img src="images/What-Is-Download.jpg">
+            </div>
+        </div>
+        <div id="frontInstruction" class="row-fluid">
+             <div class="span2">
+                <img src="images/up_arrow.png" width="80" height="140" style="float:right;">
+             </div>
+             <div class="span2">
+                <p id="greetings">Have no idea?</p>
+                <p>Try the <span style="color:#FF6857;">home menu</span> to learn more!</p>
+             </div>
+             <div class="span2">
+                <img src="images/left_arrow.png" width="140" height="80">
+             </div>
+             <div class="span2" style="float:left;">
+                <p>Just click "THE GAME" to start with <span style="color:#D3CE49;">Fluxx</span>!</p>
+             </div>
+             <div class="span2">
+                <img src="images/right_arrow.png" width="140" height="80">
+             </div>
+             <div class="span2">
+                <p>Or click "STEM CELLS" to start with <span style="color:#1587D9;">Stem cells</span>!</p>
+             </div>
+                
+                
         </div>
 
+    </div>
+    <div id="footer" class="row-fluid">
+        <div id="aboutUs" class="span11">
+            <p>©StemCellFluxx group for <a href="http://www.bme.cmu.edu/ugprog/catalog.html" style="text-decoration: none">Stem Cell Engineering Course</a></p>
+            <p>Stem Cell
+                <span id="F">F</span><span id="l">l</span><span id="u">u</span><span id="x1">x</span><span id="x2">x</span> ©2015
+            </p>
         </div>
-        <div class="span4 theme_comic">
-          <img src="images/when-I-was-a-little-stem-ce.gif">
-        </div>
-        <div class="span4 theme_comic">
-          <img src="images/ips.jpg">
-        </div>
-  </div>
-
- 
-   <div id="linkToVideo" class="row-fluid">
-    <div class="span0.5"></div>
-    <div  class="intro_video span5">
-      <iframe width="500" height="315" src="https://www.youtube.com/embed/evH0I7Coc54" frameborder="0" allowfullscreen></iframe>
+        <div class="span1"></div>
     </div>
-    <div class="span2" id="more_info">
-      <p id="greetings">Have no idea?</p>
-      <p>Just click left to start with <span style="color:#D3CE49;">stem cells</span>!</p>
-      <img  src="images/left_arrow.png" width="42" height="24">
-       <p>Or click right to start with <span style="color:#1587D9;">Fluxx</span>!</p>
-       <img  src="images/right_arrow.png" width="42" height="24">
-       <p>Try the <span style="color:#FF6857;">home menu</span> to learn more!</p>
-       <img src="images/up_arrow.png" width="24" height="42">
-    </div>
-    <div  class="intro_video span4">
-      <iframe width="400" height="300" id="fluxx_video" src="https://www.youtube.com/embed/PcR0nSmoUsw" frameborder="0" allowfullscreen></iframe>
-    </div class="span4" id="more_info">
-    <div>
-    </div>
-  </div>
-</div>
-
-  <div id="footer" class="row-fluid">
-    
-    <div id="aboutUs" class="span11">
-      <p>©StemCellFluxx group for <a href="http://www.bme.cmu.edu/ugprog/catalog.html" style="text-decoration: none">Stem Cell Engineering Course</a></p>
-      <p>Stem Cell 
-        <span id="F">F</span><span id="l">l</span><span id="u">u</span><span id="x1">x</span><span id="x2">x</span>
-        ©2015</p>
-    </div>
-    <div class="span1"></div>
-  </div>
-
 </body>
+
 </html>

@@ -88,12 +88,8 @@ body {
     background-color: #444444;
 }
 
-.intro_video >iframe{
-   margin-bottom: 2em;
-}
 
-
-div#linkToVideo #more_info {
+div#frontInstruction {
     font-family: Century Gothic, sans-serif;
     font-size: 20px;
     color:white;
