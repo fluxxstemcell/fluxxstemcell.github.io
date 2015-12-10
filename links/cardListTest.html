@@ -1,64 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <title>StemCellFluxx</title>
-    <link rel="stylesheet" href="../css/style.css">
+   
     <link href="../bootstrap/bootstrap.css" rel="stylesheet">
     <link href="../bootstrap/bootstrap-responsive.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    
+    
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+    
+    .wrapper {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -120px;
+    }
+    
+    .footer,
+    .push {
+        height: 120px;
+    }
+    </style>
 </head>
 
 <body>
-    <div id="tabs">
-        <a href="../index.html">
-            <button class="tab" id="home">HOME</button>
-        </a>
-        <a href="cardList.html">
-            <button class="tab selected" id="cardList">THE GAME</button>
-        </a>
-        <a href="stemCells.html">
-            <button class="tab" id="stemCells">STEM CELLS</button>
-        </a>
-        <a href="teachers.html">
-            <button class="tab" id="teachers">FOR TEACHERS</button>
-        </a>
-    </div>
-    <a href="StemCellTeacherGuideandLessonPlan.pdf" class="pdfLink">pdf file</a>
-    <div id="main" style="color:white;width:90%;margin-left:auto;margin-right:auto; padding:2em 2em;font-size:20px;">
-        <div id="guggenheim-container">
-            <div class="guggenheim-slider">
-                <div class='guggenheim-item'>1</div>
-                <div class='guggenheim-item'>2</div>
-                <div class='guggenheim-item'>3</div>
-                <div class='guggenheim-item'>4</div>
-                <div class='guggenheim-item'>5</div>
-                <div class='guggenheim-item'>6</div>
-                <div class='guggenheim-item'>7</div>
-                <div class='guggenheim-item'>8</div>
-                <div class='guggenheim-item'>9</div>
-                <div class='guggenheim-item'>10</div>
-                <div class='guggenheim-item'>11</div>
-                <div class='guggenheim-item'>12</div>
-                <div class='guggenheim-item'>13</div>
-                <div class='guggenheim-item'>14</div>
-                <div class='guggenheim-item'>15</div>
-                <div class='guggenheim-item'>16</div>
-                <div class='guggenheim-item'>17</div>
-            </div>
+    <div id="main">
+    <div class="container wrapper">
+        <br />
+        <h2>StemCellFluxx Card List</h2>
+        <hr>
+        <div class="pull-left">
+            <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="all">
+                All
+            </button>
+            <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="goal">
+                Goal
+            </button>
+            <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="supply">
+                Supply
+            </button>
+            <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="rule">
+                Rule
+            </button>
+            <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="action">
+                Action
+            </button>
         </div>
+        <div class="clearfix"></div>
+        <br />
+        <ul class="thumbnails gallery">
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_achillesHeel.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_badToTheBone.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_brainPower.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_burn.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_ECM.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_getBuff.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_heartOfGold.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_jointEffort.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_oldScars.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_seeingClear.jpg" />
+                </div>
+            </li>
+            <li class="span2 cardImg" data-tag='goal'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\goal\g_vascularize.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_collagen.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_CS.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_hardSubstrate.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_herculin.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_KGF.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_MyoD.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_patternedSurface.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_syringe.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_TGF-B.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_VEGF.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_BDNF.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_bFGF.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='supply'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\supply\S_BMP2.jpg" />
+                </div>
+            </li>
+            <!-- Actions -->
+            <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\collaboration.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\discardDraw.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\draw2andUseThem.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\draw3Play2ofThem.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\exchangeSupply.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\grabSth.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\jackpot.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\mixItUp.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\randomTax.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\rewind.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\rulesReset.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\simplify.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\tradeHands.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\trashAnewRule.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\trashSth.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='action'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\action\zapAcard.jpg" />
+                </div>
+            </li>
+            <!-- Rules -->
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\TFBonus.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\wellFedCells.jpg" />
+                </div>
+            </li>
+             <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\basicRules.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\doubleAgenda.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\draw2.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\draw3.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\draw4.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\goalMill.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\handLimit1.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\handLimit2.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\handLimit3.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\handLimit4.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\play2.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\play3.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\play4.jpg" />
+                </div>
+            </li>
+            <li class="span2" data-tag='rule'>
+                <div class="thumbnail">
+                    <img style="height:240px;" src="..\images\cards\rule\playAll.jpg" />
+                </div>
+            </li>
+        </ul>
+        <div class="push"></div>
     </div>
-    <!-- End of main part-->
-    <div id="footer" class="row-fluid">
-        <div id="aboutUs" class="span11">
-            <p>©StemCellFluxx group for <a href="http://www.bme.cmu.edu/ugprog/catalog.html" style="text-decoration: none">Stem Cell Engineering Course</a></p>
-            <p>Stem Cell
-                <span id="F">F</span><span id="l">l</span><span id="u">u</span><span id="x1">x</span><span id="x2">x</span> ©2015
-            </p>
-        </div>
-        <div class="span1"></div>
-    </div>
+</div>
+    <!-- /container -->
+    <!-- Footer
+        ================================================== -->
+    <!-- Le javascript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="..\js\bootstrap-portfilter.min.js"></script>
 </body>
 
 </html>
